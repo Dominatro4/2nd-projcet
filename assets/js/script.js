@@ -5,11 +5,11 @@ const resultContainer = document.getElementById('result');
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const feedbackElement = document.getElementById('feedback');
-const scoreElement = document.getElementById('score');
+const scoreElement = document.getElementById('user-score');
 const usernameInput = document.getElementById('username');
 const pointsElement = document.getElementById('points');
 
-let points = 0;
+let score = 0;
 
 let currentQuestionIndex = 0;
 
@@ -34,7 +34,7 @@ const questions = [
     },
     // More questions here
 
-    
+
 
 ];
 
@@ -72,7 +72,7 @@ function showNextQuestion() {
 }
 
 function updatePoints() {
-    pointsElement.textContent = points;
+    pointsElement.textContent = score;
 }
 
 
