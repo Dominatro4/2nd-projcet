@@ -33,7 +33,11 @@ const questions = [
         correctAnswer: "Paris"
     },
     // More questions here
-
+    {
+        question: "What is the capital of Great Britan",
+        options: ["Paris", "London", "Berlin", "Madrid"],
+        correctAnswer: "London"
+    }
 
 
 ];
