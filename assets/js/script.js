@@ -6,10 +6,11 @@ const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const feedbackElement = document.getElementById('feedback');
 const scoreElement = document.getElementById('score');
+let score = 0;
 const usernameInput = document.getElementById('username');
 
 let currentQuestionIndex = 0;
-let score = 0;
+
 
 startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', showNextQuestion);
