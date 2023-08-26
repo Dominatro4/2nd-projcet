@@ -15,6 +15,14 @@ startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', showNextQuestion);
 
 // Questions and answers
+
+    // Template for questions
+   // {
+   //     question: "",
+    //    options: ["", "", "", ""],
+   //     correctAnswer: ""
+  //  }
+
 const questions = [
     {
         question: "What is the capital of France?",
@@ -22,6 +30,8 @@ const questions = [
         correctAnswer: "Paris"
     },
     // More questions here
+
+
 ];
 
 function startQuiz() {
