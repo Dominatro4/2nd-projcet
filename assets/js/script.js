@@ -13,18 +13,8 @@ let score = 0;
 
 let currentQuestionIndex = 0;
 
-
 startButton.addEventListener('click', startQuiz);
 nextButton.addEventListener('click', showNextQuestion);
-
-// Questions and answers
-
-    // Template for questions
-   // {
-   //     question: "",
-    //    options: ["", "", "", ""],
-   //     correctAnswer: ""
-  //  }
 
 const questions = [
     {
@@ -33,13 +23,6 @@ const questions = [
         correctAnswer: "Paris"
     },
     // More questions here
-    {
-        question: "What is the capital of Great Britan",
-        options: ["Paris", "London", "Berlin", "Madrid"],
-        correctAnswer: "London"
-    }
-
-
 ];
 
 function startQuiz() {
@@ -50,7 +33,7 @@ function startQuiz() {
 }
 
 function showNextQuestion() {
-    feedbackElement.textContent = ''
+    feedbackElement.textContent = '';
     updatePoints();
 
     if (currentQuestionIndex < questions.length) {
@@ -66,19 +49,19 @@ function showNextQuestion() {
             optionsElement.appendChild(button);
         });
 
-        nextButton.classList.add('hidden');
         currentQuestionIndex++;
     } else {
         questionContainer.classList.add('hidden');
         resultContainer.classList.remove('hidden');
         scoreElement.textContent = `Your score: ${score} out of ${questions.length}`;
     }
+
+    nextButton.classList.add('hidden');
 }
 
 function updatePoints() {
     pointsElement.textContent = score;
 }
-
 
 function selectAnswer(selectedOption, correctAnswer) {
     if (selectedOption === correctAnswer) {
