@@ -22,7 +22,14 @@ const questions = [
         options: ["Paris", "London", "Berlin", "Madrid"],
         correctAnswer: "Paris"
     },
-    // More questions here
+
+    // Questions here
+
+    {
+        question: "What is the capital of Great Britan?",
+        options: ["Paris", "London", "Berlin", "Madrid"],
+        correctAnswer: "London"
+    },
 ];
 
 function startQuiz() {
