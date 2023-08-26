@@ -6,8 +6,10 @@ const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const feedbackElement = document.getElementById('feedback');
 const scoreElement = document.getElementById('score');
-let score = 0;
 const usernameInput = document.getElementById('username');
+const pointsElement = document.getElementById('points');
+
+let points = 0;
 
 let currentQuestionIndex = 0;
 
@@ -43,7 +45,8 @@ function startQuiz() {
 }
 
 function showNextQuestion() {
-    feedbackElement.textContent = '';
+    feedbackElement.textContent = ''
+    updatePoints();
 
     if (currentQuestionIndex < questions.length) {
         const question = questions[currentQuestionIndex];
@@ -67,6 +70,10 @@ function showNextQuestion() {
     }
 }
 
+function updatePoints() {
+    pointsElement.textContent = points;
+}
+
 function selectAnswer(selectedOption, correctAnswer) {
     if (selectedOption === correctAnswer) {
         score++;
@@ -74,6 +81,7 @@ function selectAnswer(selectedOption, correctAnswer) {
     } else {
         feedbackElement.textContent = 'Incorrect.';
     }
-    scoreElement.textContent = score; 
+    scoreElement.textContent = score;
+    updatePoints();
     nextButton.classList.remove('hidden');
 }
