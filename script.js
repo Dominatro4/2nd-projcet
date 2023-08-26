@@ -63,5 +63,6 @@ function selectAnswer(selectedOption, correctAnswer) {
     } else {
         feedbackElement.textContent = 'Incorrect.';
     }
+    scoreElement.textContent = score; 
     nextButton.classList.remove('hidden');
 }
