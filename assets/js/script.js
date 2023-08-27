@@ -73,9 +73,9 @@ function updatePoints() {
 function selectAnswer(selectedOption, correctAnswer) {
     if (selectedOption === correctAnswer) {
         score++;
-        feedbackElement.innerHTML = '<img src="path-to-correct-image.png" alt="Correct">';
+        feedbackElement.innerHTML = '<img src="assets\ok.png" alt="Correct">';
     } else {
-        feedbackElement.innerHTML = '<img src="path-to-incorrect-image.png" alt="Incorrect">';
+        feedbackElement.innerHTML = '<img src="assets\no.png" alt="Incorrect">';
     }
     scoreElement.textContent = score;
     updatePoints();
